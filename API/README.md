@@ -2,7 +2,7 @@
 This project is a .NET core implemented Web API for listing all of the markerpoints.
 
 ## Building and Running
-1. Change to the api directory (i.e. `dwCheckApi/dwCheckApi`)
+1. Change to the api directory (i.e. `NextFloodAPI/NextFloodAPI`)
 
     `cd NextFloodAPI`
 
