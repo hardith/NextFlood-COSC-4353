@@ -44,3 +44,7 @@ GET MarkerPointById
 ```https://localhost:5001/api/marker/getmarkerpointsbyid?id=2```
 
 ![ASPNETCOREWebAPIGET](./.github/getMarkerById.jpg)
+
+## Hosting the API
+
+The API will be hosted on `AWS lambda` and `API Gateway` and the resultant link will be provided to get access to 
