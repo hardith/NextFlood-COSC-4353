@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# NextFlood
 
 ![image](https://user-images.githubusercontent.com/14307773/139343463-2c5cce9e-db95-421f-ab03-4af2c9e3e2d9.png)
 
@@ -12,9 +12,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Installation
 
 1. `git clone https://github.com/hardith/NextFlood-COSC-4353.git`
-2. `cd profile-matching`
-3. `npm i`
-4. `npm start`
+2. `npm i`
+3. `npm start`
 
 ## Branching
 
