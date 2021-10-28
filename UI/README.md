@@ -5,6 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * React: Frontend React app
 * Firebase: Authentication
 * React-Map-GL: Map functionalities
+* Material UI
 
 ## Installation
 
