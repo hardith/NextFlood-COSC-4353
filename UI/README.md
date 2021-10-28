@@ -32,3 +32,5 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 1. `git checkout {branch-name}`
 2. `git pull origin master`
 
+## Deployment
+* AWS S3
