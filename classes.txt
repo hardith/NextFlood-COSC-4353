@@ -1,1 +1,21 @@
+UI:
 
+UI doesnt include classes since we are using react.
+
+API:
+
+ASP.Net Core Web API inclues the following classes:
+
+    1.MarkerController - this controller is responsible for controlling the way that a user interacts with the application.
+    A controller determines what response to send back to a user when a user makes a browser request.
+
+    2.MarkerPoint - this model class is responsible for handling data and business logic. 
+    A model represents the shape of the data. Model is responsible for handling database related changes.
+
+    3.IMarkerPointServices - This is an interface containing all the methods to be implemented.
+    Interfaces add a plug and play like architecture into your applications. Interfaces help define 
+    a contract, between the application and other objects.
+
+    4.MarkerPointService - A Service class is used by a client to interact with some functionality in your application, 
+    In this case all the MarkerPoints fetching, adding functionality is developed here.
+    
