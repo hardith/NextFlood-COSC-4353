@@ -22,3 +22,27 @@ INSERT INTO `nextflooddb`.`markerpoints` (`ID`, `UserID`, `DateAdded`, `ExpiresA
 -- Fetching data from markerpoints table
 SELECT * FROM nextflooddb.markerpoints;
 
+--Stored Procedure: GetAllMarkerpoints which will be used by the API
+USE `nextflooddb`;
+DROP procedure IF EXISTS `GetAllMarkerpoints`;
+
+DELIMITER $$
+CREATE PROCEDURE `GetAllMarkerpoints` ()
+BEGIN
+    SELECT * FROM `markerpoints`;
+END$$
+DELIMITER ;
+
+
+--Stored Procedure: GetMarkerpointsBySeverity which will be used by the API
+USE `nextflooddb`;
+DROP procedure IF EXISTS `GetMarkerpointsBySeverity`;
+
+DELIMITER $$
+CREATE PROCEDURE `GetMarkerpointsBySeverity`(IN param_severity VARCHAR(10))
+    BEGIN
+        SELECT * FROM `markerpoints` WHERE Severity = param_severity;
+    END
+$$
+DELIMITER ;
+
