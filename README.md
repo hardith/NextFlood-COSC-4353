@@ -65,5 +65,5 @@ It is named sqlQueriesNextFlood.sql and it's located in the DB folder of the roo
 
 > Pull requests or PRs are basically how you merge your changes with the master code. They will be revised by a member of the group and that member will post comments on your code and ask you to fix those.
 
-1. Once you push your code you will see a green message saying if you want to create a pull request. Always do a pull request to heroku-deploy as it is the main branch. Do not delete your own branch as you will continue to use it.
+1. Once you push your code you will see a green message saying if you want to create a pull request. Always do a pull request to the main branch. Do not delete your own branch as you will continue to use it.
 2. You can also click on Pull Request and open one there.
