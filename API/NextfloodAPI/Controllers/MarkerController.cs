@@ -23,6 +23,7 @@ namespace NextfloodAPI.Controllers
         [HttpGet("GetAllMarkerPoints")]
          public Task<List<MarkerPoint>> GetAllMarkerPoints()
         {
+            //return null;
             return markerPointServices.GetAllMarkerPoints();
         }
 
@@ -46,9 +47,22 @@ namespace NextfloodAPI.Controllers
         //}
 
         [HttpPost("AddMarkerPoint")]
-        public void AddMarkerPoint(MarkerPoint markerPoint)
+        public Task<int> AddMarkerPoint([FromForm] MarkerPoint markerPoint)
         {
-            markerPointServices.AddNewMarkerPoint(markerPoint);
+            return markerPointServices.AddNewMarkerPoint(markerPoint);
         }
+
+        [HttpDelete("DeleteMarkerPoint")]
+        public Task<int> DeleteMarkerPointByID(int id)
+        {
+            return markerPointServices.DeleteMarkerPointByID(id);
+        }
+
+        [HttpPut("UpdateMarkerPointByID")]
+        public Task<int> UpdateMarkerPointByID([FromForm] MarkerPoint markerPoint)
+        {
+            return markerPointServices.UpdateMarkerPointByID(markerPoint);
+        }
+        
     }
 }

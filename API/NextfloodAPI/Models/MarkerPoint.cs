@@ -3,7 +3,7 @@
 namespace NextfloodAPI.Models
 {
     public class MarkerPoint
-    {
+    {   
         public Int32 ID { get; set; }
         public string UserID { get; set; }
         public DateTime CreatedDate { get; set; }
