@@ -38,7 +38,7 @@ namespace NextfloodAPI.Services
                         select * from markerpoints
             ";
 
-            DataTable table = new DataTable();
+            //DataTable table = new DataTable();
             List<MarkerPoint> markerPointsData = new List<MarkerPoint>();
             string sqlDataSource = _configuration.GetConnectionString("dbConnString");
             
@@ -84,7 +84,7 @@ namespace NextfloodAPI.Services
                         select * from markerpoints where Severity = @severity
             ";
 
-            DataTable table = new DataTable();
+            //DataTable table = new DataTable();
             List<MarkerPoint> markerPointsData = new List<MarkerPoint>();
             string sqlDataSource = _configuration.GetConnectionString("dbConnString");
 
@@ -132,7 +132,7 @@ namespace NextfloodAPI.Services
                         select * from markerpoints where ID = @id
             ";
 
-            DataTable table = new DataTable();
+            //DataTable table = new DataTable();
             List<MarkerPoint> markerPointsData = new List<MarkerPoint>();
             string sqlDataSource = _configuration.GetConnectionString("dbConnString");
 
@@ -181,8 +181,8 @@ namespace NextfloodAPI.Services
             ";
 
             int result;
-            DataTable table = new DataTable();
-            List<MarkerPoint> markerPointsData = new List<MarkerPoint>();
+            //DataTable table = new DataTable();
+            //List<MarkerPoint> markerPointsData = new List<MarkerPoint>();
             string sqlDataSource = _configuration.GetConnectionString("dbConnString");
 
             using (MySqlConnection mycon = new MySqlConnection(sqlDataSource))
@@ -215,8 +215,8 @@ namespace NextfloodAPI.Services
             ";
 
             int result;
-            DataTable table = new DataTable();
-            List<MarkerPoint> markerPointsData = new List<MarkerPoint>();
+            //DataTable table = new DataTable();
+            //List<MarkerPoint> markerPointsData = new List<MarkerPoint>();
             string sqlDataSource = _configuration.GetConnectionString("dbConnString");
 
             using (MySqlConnection mycon = new MySqlConnection(sqlDataSource))
@@ -240,8 +240,6 @@ namespace NextfloodAPI.Services
             return result;
         }
 
-        //UPDATE employees SET lastname = 'Hill', email = 'mary.hill@classicmodelcars.com' WHERE employeeNumber = 1056;
-
         async public Task<int> DeleteMarkerPointByID(int id)
         {
             string query = @"
@@ -249,8 +247,8 @@ namespace NextfloodAPI.Services
             ";
             
             int result;
-            DataTable table = new DataTable();
-            List<MarkerPoint> markerPointsData = new List<MarkerPoint>();
+            //DataTable table = new DataTable();
+            //List<MarkerPoint> markerPointsData = new List<MarkerPoint>();
             string sqlDataSource = _configuration.GetConnectionString("dbConnString");
 
             using (MySqlConnection mycon = new MySqlConnection(sqlDataSource))
