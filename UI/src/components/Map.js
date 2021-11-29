@@ -55,7 +55,7 @@ const MapBox = () => {
 
   const onSubmitAddNewMarker = (formValues) => {
     console.log(formValues)
-    console.log("hello")
+    console.log("hello");
   }
 
   useEffect(()=>{
