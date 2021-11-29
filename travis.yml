@@ -5,5 +5,7 @@ cache:
   directories:
     - node_modules
 script:
+  - cd UI
+  - npm install
   - npm run build || true
   - npm test || true
