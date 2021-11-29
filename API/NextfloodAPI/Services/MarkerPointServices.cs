@@ -160,6 +160,7 @@ namespace NextfloodAPI.Services
                                 obj.ImageURL = reader.GetString(8);
                             if (!reader.IsDBNull(9))
                                 obj.VideoURL = reader.GetString(9);
+
                             markerPointsData.Add(obj);
                         }
                     }
