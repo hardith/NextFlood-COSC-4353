@@ -1,6 +1,6 @@
 language: csharp
 
-dist: trusty
+dist: bionic
 
 mono: none
 
