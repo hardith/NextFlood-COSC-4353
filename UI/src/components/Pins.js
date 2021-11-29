@@ -14,7 +14,6 @@ const severityColors = {
     "4":"#eb7434",
     "5":"#d00"
 }
-
 // Important for perf: the markers never change, avoid rerender when the map viewport changes
 function Pins(props) {
   const {data, onClick} = props;
