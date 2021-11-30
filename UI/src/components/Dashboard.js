@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import { Card, Button, Alert } from "react-bootstrap"
+// import { Card, Button, Alert } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
-import { Link, useHistory } from "react-router-dom"
+import {  useHistory } from "react-router-dom"
 import MenuAppBar from "./AppBar"
 import MapBox from "./Map"
 
@@ -12,7 +12,8 @@ export default function Dashboard() {
 
   async function handleLogout() {
     setError("")
-
+    console.log(error)
+    console.log(currentUser)
     try {
       await logout()
       history.push("/login")

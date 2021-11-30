@@ -2,7 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import ReactMapGL, { Popup, GeolocateControl}  from 'react-map-gl'
 import "mapbox-gl/dist/mapbox-gl.css"
 import "react-map-gl-geocoder/dist/mapbox-gl-geocoder.css"
-import DeckGL, { GeoJsonLayer } from "deck.gl";
+// import DeckGL, { GeoJsonLayer } from "deck.gl";
+import { GeoJsonLayer } from "deck.gl";
 import Geocoder from "react-map-gl-geocoder";
 import PINSJSON from '../assets/markerdata.json';
 import Pins from "./Pins"
@@ -32,6 +33,7 @@ const MapBox = () => {
 
 	const handleOnResult = event => {
     // console.log(event.result)
+    console.log(searchResultLayer)
     setSearchResult( new GeoJsonLayer({
         id: "search-result",
         data: event.result.geometry,
@@ -56,6 +58,7 @@ const MapBox = () => {
   const onSubmitAddNewMarker = (formValues) => {
     console.log(formValues);
     console.log("hello");
+    setMarkerData(markerData)
   }
 
   useEffect(()=>{

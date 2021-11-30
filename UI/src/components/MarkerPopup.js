@@ -15,7 +15,7 @@ function MarkerPopup(props) {
           Wikipedia
         </a>
       </div>
-      <img width={240} src={info.image} />
+      <img alt={"details"} width={240} src={info.image} />
     </div>
   );
 }

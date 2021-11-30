@@ -6,9 +6,9 @@ import FormControl from "@mui/material/FormControl";
 import FormLabel from "@mui/material/FormLabel";
 import RadioGroup from "@mui/material/RadioGroup";
 import Radio from "@mui/material/Radio";
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
-import Slider from "@mui/material/Slider";
+// import Select from "@mui/material/Select";
+// import MenuItem from "@mui/material/MenuItem";
+// import Slider from "@mui/material/Slider";
 import Button from "@mui/material/Button";
 const defaultValues = {
   name: "",
