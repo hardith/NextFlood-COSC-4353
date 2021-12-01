@@ -1,11 +1,19 @@
-language: node_js
-node_js:
-  - "14.18.1"
-cache:
-  directories:
-    - node_modules
-script:
-  - cd UI
-  - npm install
-  - npm run build
-  - npm test
+jobs:
+  include:
+  - language: node_js
+    node_js:
+      - "14.18.1"
+    cache:
+      directories:
+        - node_modules
+    script:
+      - cd UI
+      - npm install
+      - npm run build    
+  - language: csharp
+    dist: bionic
+    mono: none
+    dotnet: 3.1
+    script:
+      - cd API
+      - dotnet build
