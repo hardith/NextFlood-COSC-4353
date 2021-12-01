@@ -17,6 +17,16 @@ const geolocateControlStyle= {
   zIndex:100
 };
 
+ // eslint-disable-next-line
+function getAllMarkerPoints(){
+  axios.get(`https://8kyy3alk59.execute-api.us-east-1.amazonaws.com/prod/api/marker/getallmarkerpoints`)
+  .then((response) => {
+    if(response.data.length > 0) {
+      return response.data
+    }
+  })
+}
+
 const MapBox = () => {
   const [viewport, setViewport] = React.useState({
     longitude: -122.45,
@@ -58,6 +68,8 @@ const MapBox = () => {
       ...geocoderDefaultOverrides
     });
   }
+
+  
 
   const onSubmitAddNewMarker = (formValues) => {
     console.log(formValues);
@@ -182,3 +194,4 @@ const MapBox = () => {
 }
 
 export default MapBox;
+// export const getAllMarkers =  getAllMarkerPoints();
