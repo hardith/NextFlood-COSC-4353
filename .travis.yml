@@ -2,7 +2,7 @@ jobs:
   include:
   - language: node_js
     node_js:
-      - "stable"
+      - "14.18.1"
     cache:
       directories:
         - node_modules

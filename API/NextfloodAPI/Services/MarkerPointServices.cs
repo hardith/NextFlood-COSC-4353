@@ -94,6 +94,11 @@ namespace NextfloodAPI.Services
                     myCommand.Parameters.AddWithValue("@severity", severity);
                     var reader = await myCommand.ExecuteReaderAsync();
 
+                    if (reader.HasRows == false)
+                    {
+                        return null;
+                    }
+
                     using (reader)
                     {
                         while (await reader.ReadAsync())
@@ -113,7 +118,6 @@ namespace NextfloodAPI.Services
                                 obj.ImageURL = reader.GetString(8);
                             if (!reader.IsDBNull(9))
                                 obj.VideoURL = reader.GetString(9);
-                            markerPointsData.Add(obj);
                             markerPointsData.Add(obj);
                         }
                     }
@@ -141,11 +145,14 @@ namespace NextfloodAPI.Services
                     myCommand.Parameters.AddWithValue("@id", id);
                     var reader = await myCommand.ExecuteReaderAsync();
 
+                    if (reader.HasRows == false)
+                    {
+                        return null;
+                    }
                     using (reader)
                     {
                         while (await reader.ReadAsync())
                         {
-
                             obj.ID = reader.GetInt32(0);
                             obj.UserID = reader.GetString(1);
                             obj.CreatedDate = reader.GetDateTime(2);
@@ -160,6 +167,7 @@ namespace NextfloodAPI.Services
                                 obj.ImageURL = reader.GetString(8);
                             if (!reader.IsDBNull(9))
                                 obj.VideoURL = reader.GetString(9);
+
                         }
                     }
 

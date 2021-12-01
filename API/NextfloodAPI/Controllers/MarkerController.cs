@@ -21,48 +21,40 @@ namespace NextfloodAPI.Controllers
         }
 
         [HttpGet("GetAllMarkerPoints")]
-         public Task<List<MarkerPoint>> GetAllMarkerPoints()
+        public async Task<List<MarkerPoint>> GetAllMarkerPoints()
         {
-            //return null;
-            return markerPointServices.GetAllMarkerPoints();
+            return await markerPointServices.GetAllMarkerPoints();
         }
 
         [HttpGet("GetMarkerPointsBySeverity")]
-        public Task<List<MarkerPoint>> GetMarkerPointsBySeverity(string severity)
+        public async Task<List<MarkerPoint>> GetMarkerPointsBySeverity(string severity)
         {
-            return markerPointServices.GetMarkerPointsBySeverity(severity);
+            return await markerPointServices.GetMarkerPointsBySeverity(severity);
         }
 
         [HttpGet("GetMarkerPointsById")]
-        public Task<List<MarkerPoint>> GetMarkerPointsById(int id)
+        public async Task<MarkerPoint> GetMarkerPointsById(int id)
         {
-            return markerPointServices.GetMarkerPointsById(id);
+            return await markerPointServices.GetMarkerPointsById(id);
         }
 
-        //[HttpPost("")]
-        //public Task<MarkerPoint> AddMarkerPoint(MarkerPoint markerPoint)
-        //{
-        //    var marker = markerPointServices.AddNewMarkerPoint(markerPoint);
-        //    return 
-        //}
-
         [HttpPost("AddMarkerPoint")]
-        public Task<int> AddMarkerPoint([FromForm] MarkerPoint markerPoint)
+        public async Task<int> AddMarkerPoint(MarkerPoint markerPoint)
         {
-            return markerPointServices.AddNewMarkerPoint(markerPoint);
+            return await markerPointServices.AddNewMarkerPoint(markerPoint);
         }
 
         [HttpDelete("DeleteMarkerPoint")]
-        public Task<int> DeleteMarkerPointByID(int id)
+        public async Task<int> DeleteMarkerPointByID(int id)
         {
-            return markerPointServices.DeleteMarkerPointByID(id);
+            return await markerPointServices.DeleteMarkerPointByID(id);
         }
 
         [HttpPut("UpdateMarkerPointByID")]
-        public Task<int> UpdateMarkerPointByID([FromForm] MarkerPoint markerPoint)
+        public async Task<int> UpdateMarkerPointByID(MarkerPoint markerPoint)
         {
-            return markerPointServices.UpdateMarkerPointByID(markerPoint);
+            return await markerPointServices.UpdateMarkerPointByID(markerPoint);
         }
-        
+
     }
 }

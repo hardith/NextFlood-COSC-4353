@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.810.11
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NextfloodAPI", "NextfloodAPI\NextfloodAPI.csproj", "{7103B1BE-7105-4A9F-B067-925536606E3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NextfloodAPI", "NextfloodAPI\NextfloodAPI.csproj", "{7103B1BE-7105-4A9F-B067-925536606E3E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NextFloodDALTest", "NextFloodDALTest\NextFloodDALTest.csproj", "{26CC7C3B-2E64-4DCA-A6E6-476D08CE5A29}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7103B1BE-7105-4A9F-B067-925536606E3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7103B1BE-7105-4A9F-B067-925536606E3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7103B1BE-7105-4A9F-B067-925536606E3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26CC7C3B-2E64-4DCA-A6E6-476D08CE5A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26CC7C3B-2E64-4DCA-A6E6-476D08CE5A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26CC7C3B-2E64-4DCA-A6E6-476D08CE5A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26CC7C3B-2E64-4DCA-A6E6-476D08CE5A29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
