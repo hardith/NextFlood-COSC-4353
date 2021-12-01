@@ -9,7 +9,7 @@ namespace NextfloodAPI.Services
     {
         Task<List<MarkerPoint>> GetAllMarkerPoints();
         Task<List<MarkerPoint>> GetMarkerPointsBySeverity(string severity);
-        Task<List<MarkerPoint>> GetMarkerPointsById(int id);
+        Task<MarkerPoint> GetMarkerPointsById(int id);
         Task<int> AddNewMarkerPoint(MarkerPoint markerPoint);
         Task<int> DeleteMarkerPointByID(int id);
         Task<int> UpdateMarkerPointByID(MarkerPoint markerPoint);

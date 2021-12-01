@@ -124,13 +124,13 @@ namespace NextfloodAPI.Services
             return markerPointsData;
         }
 
-        async public Task<List<MarkerPoint>> GetMarkerPointsById(int id)
+        async public Task<MarkerPoint> GetMarkerPointsById(int id)
         {
             string query = @"
                         select * from markerpoints where ID = @id
             ";
 
-            List<MarkerPoint> markerPointsData = new List<MarkerPoint>();
+            MarkerPoint obj = new MarkerPoint();
             string sqlDataSource = _configuration.GetConnectionString("dbConnString");
 
             using (MySqlConnection mycon = new MySqlConnection(sqlDataSource))
@@ -145,7 +145,7 @@ namespace NextfloodAPI.Services
                     {
                         while (await reader.ReadAsync())
                         {
-                            var obj = new MarkerPoint();
+
                             obj.ID = reader.GetInt32(0);
                             obj.UserID = reader.GetString(1);
                             obj.CreatedDate = reader.GetDateTime(2);
@@ -160,15 +160,13 @@ namespace NextfloodAPI.Services
                                 obj.ImageURL = reader.GetString(8);
                             if (!reader.IsDBNull(9))
                                 obj.VideoURL = reader.GetString(9);
-
-                            markerPointsData.Add(obj);
                         }
                     }
 
                     mycon.Close();
                 }
             }
-            return markerPointsData;
+            return obj;
         }
 
         async public Task<int> AddNewMarkerPoint(MarkerPoint markerPoint)
