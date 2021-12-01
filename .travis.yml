@@ -17,3 +17,4 @@ jobs:
     script:
       - cd API
       - dotnet build
+      - dotnet test NextFloodDALTest/NextFloodDALTest.csproj
