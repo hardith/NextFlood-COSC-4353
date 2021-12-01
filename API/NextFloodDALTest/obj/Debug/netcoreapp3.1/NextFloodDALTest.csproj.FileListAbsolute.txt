@@ -190,3 +190,10 @@ F:\UH\SoftwareDesign\Project\NextFlood-COSC-4353\API\NextFloodDALTest\bin\Debug\
 F:\UH\SoftwareDesign\Project\NextFlood-COSC-4353\API\NextFloodDALTest\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 F:\UH\SoftwareDesign\Project\NextFlood-COSC-4353\API\NextFloodDALTest\bin\Debug\netcoreapp3.1\NextfloodAPI.dll
 F:\UH\SoftwareDesign\Project\NextFlood-COSC-4353\API\NextFloodDALTest\bin\Debug\netcoreapp3.1\NextfloodAPI.pdb
+F:\UH\SoftwareDesign\Project\NextFlood-COSC-4353\API\NextFloodDALTest\bin\Debug\netcoreapp3.1\aws-lambda-tools-defaults.json
+F:\UH\SoftwareDesign\Project\NextFlood-COSC-4353\API\NextFloodDALTest\bin\Debug\netcoreapp3.1\Amazon.Lambda.APIGatewayEvents.dll
+F:\UH\SoftwareDesign\Project\NextFlood-COSC-4353\API\NextFloodDALTest\bin\Debug\netcoreapp3.1\Amazon.Lambda.ApplicationLoadBalancerEvents.dll
+F:\UH\SoftwareDesign\Project\NextFlood-COSC-4353\API\NextFloodDALTest\bin\Debug\netcoreapp3.1\Amazon.Lambda.AspNetCoreServer.dll
+F:\UH\SoftwareDesign\Project\NextFlood-COSC-4353\API\NextFloodDALTest\bin\Debug\netcoreapp3.1\Amazon.Lambda.Core.dll
+F:\UH\SoftwareDesign\Project\NextFlood-COSC-4353\API\NextFloodDALTest\bin\Debug\netcoreapp3.1\Amazon.Lambda.Logging.AspNetCore.dll
+F:\UH\SoftwareDesign\Project\NextFlood-COSC-4353\API\NextFloodDALTest\bin\Debug\netcoreapp3.1\Amazon.Lambda.Serialization.SystemTextJson.dll
