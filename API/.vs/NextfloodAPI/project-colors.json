@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "7103b1be-7105-4a9f-b067-925536606e3e": {
+      "ProjectGuid": "7103b1be-7105-4a9f-b067-925536606e3e",
+      "DisplayName": "NextfloodAPI",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "26cc7c3b-2e64-4dca-a6e6-476d08ce5a29": {
+      "ProjectGuid": "26cc7c3b-2e64-4dca-a6e6-476d08ce5a29",
+      "DisplayName": "NextFloodDALTest",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

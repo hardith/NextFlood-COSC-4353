@@ -21,34 +21,40 @@ namespace NextfloodAPI.Controllers
         }
 
         [HttpGet("GetAllMarkerPoints")]
-         public Task<List<MarkerPoint>> GetAllMarkerPoints()
+        public async Task<List<MarkerPoint>> GetAllMarkerPoints()
         {
-            return markerPointServices.GetAllMarkerPoints();
+            return await markerPointServices.GetAllMarkerPoints();
         }
 
         [HttpGet("GetMarkerPointsBySeverity")]
-        public Task<List<MarkerPoint>> GetMarkerPointsBySeverity(string severity)
+        public async Task<List<MarkerPoint>> GetMarkerPointsBySeverity(string severity)
         {
-            return markerPointServices.GetMarkerPointsBySeverity(severity);
+            return await markerPointServices.GetMarkerPointsBySeverity(severity);
         }
 
         [HttpGet("GetMarkerPointsById")]
-        public Task<List<MarkerPoint>> GetMarkerPointsById(int id)
+        public async Task<MarkerPoint> GetMarkerPointsById(int id)
         {
-            return markerPointServices.GetMarkerPointsById(id);
+            return await markerPointServices.GetMarkerPointsById(id);
         }
-
-        //[HttpPost("")]
-        //public Task<MarkerPoint> AddMarkerPoint(MarkerPoint markerPoint)
-        //{
-        //    var marker = markerPointServices.AddNewMarkerPoint(markerPoint);
-        //    return 
-        //}
 
         [HttpPost("AddMarkerPoint")]
-        public void AddMarkerPoint(MarkerPoint markerPoint)
+        public async Task<int> AddMarkerPoint(MarkerPoint markerPoint)
         {
-            markerPointServices.AddNewMarkerPoint(markerPoint);
+            return await markerPointServices.AddNewMarkerPoint(markerPoint);
         }
+
+        [HttpDelete("DeleteMarkerPoint")]
+        public async Task<int> DeleteMarkerPointByID(int id)
+        {
+            return await markerPointServices.DeleteMarkerPointByID(id);
+        }
+
+        [HttpPut("UpdateMarkerPointByID")]
+        public async Task<int> UpdateMarkerPointByID(MarkerPoint markerPoint)
+        {
+            return await markerPointServices.UpdateMarkerPointByID(markerPoint);
+        }
+
     }
 }
