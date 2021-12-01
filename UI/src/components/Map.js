@@ -5,11 +5,12 @@ import "react-map-gl-geocoder/dist/mapbox-gl-geocoder.css"
 // import DeckGL, { GeoJsonLayer } from "deck.gl";
 import { GeoJsonLayer } from "deck.gl";
 import Geocoder from "react-map-gl-geocoder";
-import PINSJSON from '../assets/markerdata.json';
+// import PINSJSON from '../assets/markerdata.json';
 import Pins from "./Pins"
 import MarkerPopup from './MarkerPopup';
 import AddForm from './AddMarkerForm';
-
+import { useAuth } from "../contexts/AuthContext"
+const axios = require('axios');
 const geolocateControlStyle= {
   right: 10,
   top: 10,
@@ -27,9 +28,12 @@ const MapBox = () => {
 	const mapRef = useRef()
   const [popupInfo, setPopupInfo] = useState(null);
   const [addMarker, setAddMarker] = useState(false);
-  const [markerData, setMarkerData] = useState(PINSJSON)
+  // const [markerData, setMarkerData] = useState(PINSJSON)
+  const [markerData, setMarkerData] = useState([])
   const [newLatitude, setNewLatitude] = useState(0)
   const [newLongitude, setNewLongitude] = useState(0)
+
+  const { currentUser } = useAuth()
 
 	const handleOnResult = event => {
     // console.log(event.result)
@@ -58,8 +62,52 @@ const MapBox = () => {
   const onSubmitAddNewMarker = (formValues) => {
     console.log(formValues);
     console.log("hello");
+
+    // description: ""
+    // imageurl: ""
+    // name: ""
+    // severity: ""
+    // videourl: ""
+
+    let now = new Date()
+    // submit the new data
+    axios.post('https://8kyy3alk59.execute-api.us-east-1.amazonaws.com/prod/api/marker/addnewmarkerpoint', {
+        "userID": currentUser,
+        "createdDate": now.toISOString,
+        "expiryDate": now.toISOString,
+        "latitude": newLatitude,
+        "longitude": newLongitude,
+        "description": formValues.description,
+        "severity": formValues.severity,
+        "imageURL": formValues.imageurl,
+        "videoURL": formValues.videourl
+      })
+      .then(function (response) {
+        console.log("succeeded");
+        console.log(response.data)
+        axios.get(`https://8kyy3alk59.execute-api.us-east-1.amazonaws.com/prod/api/marker/getallmarkerpoints`)
+        .then((response) => {
+          if(response.data.length > 0) {
+            setMarkerData(response.data)
+          }
+        })
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+    // get all the data
+    console.log(markerData);
     setMarkerData(markerData)
   }
+
+  useEffect(()=>{
+    axios.get(`https://8kyy3alk59.execute-api.us-east-1.amazonaws.com/prod/api/marker/getallmarkerpoints`)
+      .then((response) => {
+        if(response.data.length > 0) {
+          setMarkerData(response.data)
+        }
+      })
+  },[])
 
   useEffect(()=>{
     
