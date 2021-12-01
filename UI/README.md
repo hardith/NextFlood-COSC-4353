@@ -1,5 +1,7 @@
 # NextFlood UI
 
+[![Build Status](https://app.travis-ci.com/hardith/NextFlood-COSC-4353.svg?branch=UI_feature_sprint2)](https://github.com/hardith/NextFlood-COSC-4353)
+
 ![image](https://user-images.githubusercontent.com/14307773/139343463-2c5cce9e-db95-421f-ab03-4af2c9e3e2d9.png)
 
 ## Technologies
